@@ -1,7 +1,6 @@
 package com.demo.model;
 
 import java.util.Set;
-//import Employee
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -19,6 +18,13 @@ public class Project {
 	public Project() {
 		super();
 	}
+	
+	public Project(int pid, String pname) {
+		super();
+		this.pid = pid;
+		this.pname = pname;
+	}
+
 	public Project(int pid, String pname, Set<Employee> eset) {
 		super();
 		this.pid = pid;
@@ -45,8 +51,7 @@ public class Project {
 	}
 	@Override
 	public String toString() {
-		return "Project [pid=" + pid + ", pname=" + pname + ", eset=" + eset + "]";
+		return "Project [pid=" + pid + ", pname=" + pname +  "]";
 	}
-	
 
 }

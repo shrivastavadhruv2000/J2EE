@@ -6,6 +6,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.*;
+
+
+@Entity(name="emptab11")
 public class Employee {
 	public Employee() {
 		super();
@@ -40,6 +43,11 @@ public class Employee {
 		this.empid = empid;
 		this.ename = ename;
 		this.pset = pset;
+	}
+	public Employee(int empid, String ename) {
+		super();
+		this.empid = empid;
+		this.ename = ename;
 	}
 	
 	public String toString() {
